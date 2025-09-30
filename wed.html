@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sangeetha ♥ Kanishka Wedding Invitation — December 6, 2025</title>
+  <meta name="description" content="Join Sangeetha & Kanishka on December 6, 2025. RSVP online for our wedding celebration.">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cream: '#FFF8F2',
+            dustyRose: '#EAA7A1',
+            gold: '#D4AF37'
+          },
+          fontFamily: {
+            'playfair': ['Playfair Display', 'serif'],
+            'poppins': ['Poppins', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body { box-sizing: border-box; }
+    .parallax-hero { background-attachment: fixed; background-position: center; background-repeat: no-repeat; background-size: cover; }
+    .fade-in { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+    .countdown-box { background: rgba(255, 248, 242, 0.95); backdrop-filter: blur(10px); }
+    .gallery-image { transition: transform 0.3s ease; }
+    .gallery-image:hover { transform: scale(1.05); }
+    .btn-hover { transition: all 0.3s ease; }
+    .btn-hover:hover { transform: translateY(-2px); box-shadow: 0 10px 25px rgba(0,0,0,0.15); }
+    .hero-zoom { animation: slowZoom 20s ease-in-out infinite alternate; }
+    @keyframes slowZoom { 0% { transform: scale(1); } 100% { transform: scale(1.05); } }
+    .toast { position: fixed; top: 20px; right: 20px; background: #10B981; color: white; padding: 16px 24px; border-radius: 8px; box-shadow: 0 10px 25px rgba(0,0,0,0.2); transform: translateX(400px); transition: transform 0.3s ease; z-index: 1000; }
+    .toast.show { transform: translateX(0); }
+    @media (max-width: 768px) { .parallax-hero { background-attachment: scroll; } }
+  </style>
+</head>
+<body class="font-poppins bg-cream">
+
+  <!-- Hero Section -->
+  <section id="hero" class="relative h-screen flex items-center justify-center parallax-hero hero-zoom" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1606800052052-a08af7148866?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');">
+    <div class="text-center text-white px-4 max-w-4xl mx-auto">
+      <h1 class="font-playfair text-2xl md:text-4xl mb-4 fade-in">You're Invited<br><span class="text-lg md:text-2xl text-dustyRose">நல்வரவு</span></h1>
+      <h2 class="font-playfair text-4xl md:text-7xl font-bold mb-6 fade-in" style="animation-delay: 0.2s;">Sangeetha ♥ Kanishka</h2>
+      <p class="text-lg md:text-xl mb-8 fade-in" style="animation-delay: 0.4s;">Join us to celebrate our wedding<br><span class="text-dustyRose">எங்களின் திருமணத்திற்கு வருக</span></p>
+      <button onclick="scrollToRSVP()" class="bg-dustyRose hover:bg-opacity-90 text-white px-8 py-4 rounded-full text-lg font-semibold btn-hover fade-in" style="animation-delay: 0.6s;">RSVP Now / பங்கேற்பு தெரிவிக்கவும்</button>
+    </div>
+  </section>
+
+  <!-- Countdown -->
+  <section id="countdown" class="py-16 bg-white">
+    <div class="container mx-auto px-4 text-center">
+      <div class="fade-in">
+        <h3 class="font-playfair text-3xl md:text-4xl font-bold text-gray-800 mb-4">Save the Date</h3>
+        <p class="font-playfair text-2xl md:text-3xl text-dustyRose mb-8">Saturday, December 6, 2025</p>
+        <div class="countdown-box rounded-2xl p-8 max-w-2xl mx-auto mb-6">
+          <div class="grid grid-cols-4 gap-4 text-center">
+            <div><div id="days" class="text-3xl md:text-4xl font-bold text-dustyRose">00</div><div class="text-sm text-gray-600">Days</div></div>
+            <div><div id="hours" class="text-3xl md:text-4xl font-bold text-dustyRose">00</div><div class="text-sm text-gray-600">Hours</div></div>
+            <div><div id="minutes" class="text-3xl md:text-4xl font-bold text-dustyRose">00</div><div class="text-sm text-gray-600">Minutes</div></div>
+            <div><div id="seconds" class="text-3xl md:text-4xl font-bold text-dustyRose">00</div><div class="text-sm text-gray-600">Seconds</div></div>
+          </div>
+        </div>
+        <p class="text-gray-600">Ceremony starts at 10:00 AM</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- RSVP Form -->
+  <section id="rsvp" class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-2xl mx-auto">
+        <div class="text-center mb-12 fade-in">
+          <h3 class="font-playfair text-3xl md:text-4xl font-bold text-gray-800 mb-4">RSVP</h3>
+          <p class="text-gray-600">Please let us know if you'll be joining our celebration</p>
+        </div>
+
+        <form id="rsvpForm" class="bg-cream rounded-2xl p-8 fade-in">
+          <div class="grid md:grid-cols-2 gap-6 mb-6">
+            <div>
+              <label for="guestName" class="block text-gray-700 font-semibold mb-2">Guest Name *</label>
+              <input type="text" id="guestName" name="guestName" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-dustyRose focus:outline-none">
+            </div>
+            <div>
+              <label for="guestCount" class="block text-gray-700 font-semibold mb-2">Number of Guests *</label>
+              <select id="guestCount" name="guestCount" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-dustyRose focus:outline-none">
+                <option value="">Select...</option>
+                <option value="1">1 Guest</option>
+                <option value="2">2 Guests</option>
+                <option value="3">3 Guests</option>
+                <option value="4">4 Guests</option>
+                <option value="5+">5+ Guests</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="mb-6">
+            <label class="block text-gray-700 font-semibold mb-2">Will you be attending? *</label>
+            <div class="flex gap-4">
+              <label class="flex items-center"><input type="radio" name="attending" value="yes" required class="mr-2"><span>Yes, I'll be there!</span></label>
+              <label class="flex items-center"><input type="radio" name="attending" value="no" required class="mr-2"><span>Sorry, can't make it</span></label>
+            </div>
+          </div>
+
+          <div class="mb-6">
+            <label for="contactNumber" class="block text-gray-700 font-semibold mb-2">Contact Number</label>
+            <input type="tel" id="contactNumber" name="contactNumber" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-dustyRose focus:outline-none" placeholder="+94 77 123 4567">
+          </div>
+
+          <button type="submit" class="w-full bg-dustyRose hover:bg-opacity-90 text-white py-4 rounded-lg font-semibold text-lg btn-hover">Submit RSVP</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Toast -->
+  <div id="toast" class="toast"><div class="flex items-center gap-2"><span>✅</span><span id="toastMessage">Thank you — we've received your RSVP!</span></div></div>
+
+  <!-- Scripts -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+      // Countdown
+      function updateCountdown() {
+        const weddingDate = new Date('2025-12-06T10:00:00').getTime();
+        const now = new Date().getTime();
+        const distance = weddingDate - now;
+        const days = Math.floor(distance / (1000*60*60*24));
+        const hours = Math.floor((distance % (1000*60*60*24)) / (1000*60*60));
+        const minutes = Math.floor((distance % (1000*60*60)) / (1000*60));
+        const seconds = Math.floor((distance % (1000*60)) / 1000);
+        document.getElementById('days').textContent = days.toString().padStart(2,'0');
+        document.getElementById('hours').textContent = hours.toString().padStart(2,'0');
+        document.getElementById('minutes').textContent = minutes.toString().padStart(2,'0');
+        document.getElementById('seconds').textContent = seconds.toString().padStart(2,'0');
+      }
+      setInterval(updateCountdown, 1000); updateCountdown();
+
+      // Scroll fade-in
+      function handleScrollAnimations() {
+        document.querySelectorAll('.fade-in').forEach(el => {
+          if (window.scrollY + window.innerHeight > el.offsetTop + 100) el.classList.add('visible');
+        });
+      }
+      window.addEventListener('scroll', handleScrollAnimations); handleScrollAnimations();
+
+      // RSVP Form
+      document.getElementById('rsvpForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const formData = Object.fromEntries(new FormData(this));
+        console.log('RSVP Data:', formData);
+        showToast('Thank you — we\'ve received your RSVP! / நன்றி — உங்கள் பங்கேற்பு பதிவு செய்யப்பட்டது!');
+        this.reset();
+      });
+
+      function showToast(message) {
+        const toast = document.getElementById('toast');
+        const toastMessage = document.getElementById('toastMessage');
+        toastMessage.textContent = message;
+        toast.classList.add('show');
+        setTimeout(() => toast.classList.remove('show'), 5000);
+      }
+
+      // Scroll to RSVP
+      window.scrollToRSVP = function() {
+        document.getElementById('rsvp').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+
+    });
+  </script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sangeetha ♥ Kanishka Wedding Invitation — December 6, 2025</title>
+  <meta name="description" content="Join Sangeetha & Kanishka on December 6, 2025. RSVP online for our wedding celebration.">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cream: '#FFF8F2',
+            dustyRose: '#EAA7A1',
+            gold: '#D4AF37'
+          },
+          fontFamily: {
+            'playfair': ['Playfair Display', 'serif'],
+            'poppins': ['Poppins', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body { box-sizing: border-box; }
+    .parallax-hero { background-attachment: fixed; background-position: center; background-repeat: no-repeat; background-size: cover; }
+    .fade-in { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+    .countdown-box { background: rgba(255, 248, 242, 0.95); backdrop-filter: blur(10px); }
+    .gallery-image { transition: transform 0.3s ease; }
+    .gallery-image:hover { transform: scale(1.05); }
+    .btn-hover { transition: all 0.3s ease; }
+    .btn-hover:hover { transform: translateY(-2px); box-shadow: 0 10px 25px rgba(0,0,0,0.15); }
+    .hero-zoom { animation: slowZoom 20s ease-in-out infinite alternate; }
+    @keyframes slowZoom { 0% { transform: scale(1); } 100% { transform: scale(1.05); } }
+    .toast { position: fixed; top: 20px; right: 20px; background: #10B981; color: white; padding: 16px 24px; border-radius: 8px; box-shadow: 0 10px 25px rgba(0,0,0,0.2); transform: translateX(400px); transition: transform 0.3s ease; z-index: 1000; }
+    .toast.show { transform: translateX(0); }
+    @media (max-width: 768px) { .parallax-hero { background-attachment: scroll; } }
+  </style>
+</head>
+<body class="font-poppins bg-cream">
+
+  <!-- Hero Section -->
+  <section id="hero" class="relative h-screen flex items-center justify-center parallax-hero hero-zoom" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1606800052052-a08af7148866?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');">
+    <div class="text-center text-white px-4 max-w-4xl mx-auto">
+      <h1 class="font-playfair text-2xl md:text-4xl mb-4 fade-in">You're Invited<br><span class="text-lg md:text-2xl text-dustyRose">நல்வரவு</span></h1>
+      <h2 class="font-playfair text-4xl md:text-7xl font-bold mb-6 fade-in" style="animation-delay: 0.2s;">Sangeetha ♥ Kanishka</h2>
+      <p class="text-lg md:text-xl mb-8 fade-in" style="animation-delay: 0.4s;">Join us to celebrate our wedding<br><span class="text-dustyRose">எங்களின் திருமணத்திற்கு வருக</span></p>
+      <button onclick="scrollToRSVP()" class="bg-dustyRose hover:bg-opacity-90 text-white px-8 py-4 rounded-full text-lg font-semibold btn-hover fade-in" style="animation-delay: 0.6s;">RSVP Now / பங்கேற்பு தெரிவிக்கவும்</button>
+    </div>
+  </section>
+
+  <!-- Countdown -->
+  <section id="countdown" class="py-16 bg-white">
+    <div class="container mx-auto px-4 text-center">
+      <div class="fade-in">
+        <h3 class="font-playfair text-3xl md:text-4xl font-bold text-gray-800 mb-4">Save the Date</h3>
+        <p class="font-playfair text-2xl md:text-3xl text-dustyRose mb-8">Saturday, December 6, 2025</p>
+        <div class="countdown-box rounded-2xl p-8 max-w-2xl mx-auto mb-6">
+          <div class="grid grid-cols-4 gap-4 text-center">
+            <div><div id="days" class="text-3xl md:text-4xl font-bold text-dustyRose">00</div><div class="text-sm text-gray-600">Days</div></div>
+            <div><div id="hours" class="text-3xl md:text-4xl font-bold text-dustyRose">00</div><div class="text-sm text-gray-600">Hours</div></div>
+            <div><div id="minutes" class="text-3xl md:text-4xl font-bold text-dustyRose">00</div><div class="text-sm text-gray-600">Minutes</div></div>
+            <div><div id="seconds" class="text-3xl md:text-4xl font-bold text-dustyRose">00</div><div class="text-sm text-gray-600">Seconds</div></div>
+          </div>
+        </div>
+        <p class="text-gray-600">Ceremony starts at 10:00 AM</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- RSVP Form -->
+  <section id="rsvp" class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-2xl mx-auto">
+        <div class="text-center mb-12 fade-in">
+          <h3 class="font-playfair text-3xl md:text-4xl font-bold text-gray-800 mb-4">RSVP</h3>
+          <p class="text-gray-600">Please let us know if you'll be joining our celebration</p>
+        </div>
+
+        <form id="rsvpForm" class="bg-cream rounded-2xl p-8 fade-in">
+          <div class="grid md:grid-cols-2 gap-6 mb-6">
+            <div>
+              <label for="guestName" class="block text-gray-700 font-semibold mb-2">Guest Name *</label>
+              <input type="text" id="guestName" name="guestName" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-dustyRose focus:outline-none">
+            </div>
+            <div>
+              <label for="guestCount" class="block text-gray-700 font-semibold mb-2">Number of Guests *</label>
+              <select id="guestCount" name="guestCount" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-dustyRose focus:outline-none">
+                <option value="">Select...</option>
+                <option value="1">1 Guest</option>
+                <option value="2">2 Guests</option>
+                <option value="3">3 Guests</option>
+                <option value="4">4 Guests</option>
+                <option value="5+">5+ Guests</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="mb-6">
+            <label class="block text-gray-700 font-semibold mb-2">Will you be attending? *</label>
+            <div class="flex gap-4">
+              <label class="flex items-center"><input type="radio" name="attending" value="yes" required class="mr-2"><span>Yes, I'll be there!</span></label>
+              <label class="flex items-center"><input type="radio" name="attending" value="no" required class="mr-2"><span>Sorry, can't make it</span></label>
+            </div>
+          </div>
+
+          <div class="mb-6">
+            <label for="contactNumber" class="block text-gray-700 font-semibold mb-2">Contact Number</label>
+            <input type="tel" id="contactNumber" name="contactNumber" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-dustyRose focus:outline-none" placeholder="+94 77 123 4567">
+          </div>
+
+          <button type="submit" class="w-full bg-dustyRose hover:bg-opacity-90 text-white py-4 rounded-lg font-semibold text-lg btn-hover">Submit RSVP</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Toast -->
+  <div id="toast" class="toast"><div class="flex items-center gap-2"><span>✅</span><span id="toastMessage">Thank you — we've received your RSVP!</span></div></div>
+
+  <!-- Scripts -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+      // Countdown
+      function updateCountdown() {
+        const weddingDate = new Date('2025-12-06T10:00:00').getTime();
+        const now = new Date().getTime();
+        const distance = weddingDate - now;
+        const days = Math.floor(distance / (1000*60*60*24));
+        const hours = Math.floor((distance % (1000*60*60*24)) / (1000*60*60));
+        const minutes = Math.floor((distance % (1000*60*60)) / (1000*60));
+        const seconds = Math.floor((distance % (1000*60)) / 1000);
+        document.getElementById('days').textContent = days.toString().padStart(2,'0');
+        document.getElementById('hours').textContent = hours.toString().padStart(2,'0');
+        document.getElementById('minutes').textContent = minutes.toString().padStart(2,'0');
+        document.getElementById('seconds').textContent = seconds.toString().padStart(2,'0');
+      }
+      setInterval(updateCountdown, 1000); updateCountdown();
+
+      // Scroll fade-in
+      function handleScrollAnimations() {
+        document.querySelectorAll('.fade-in').forEach(el => {
+          if (window.scrollY + window.innerHeight > el.offsetTop + 100) el.classList.add('visible');
+        });
+      }
+      window.addEventListener('scroll', handleScrollAnimations); handleScrollAnimations();
+
+      // RSVP Form
+      document.getElementById('rsvpForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const formData = Object.fromEntries(new FormData(this));
+        console.log('RSVP Data:', formData);
+        showToast('Thank you — we\'ve received your RSVP! / நன்றி — உங்கள் பங்கேற்பு பதிவு செய்யப்பட்டது!');
+        this.reset();
+      });
+
+      function showToast(message) {
+        const toast = document.getElementById('toast');
+        const toastMessage = document.getElementById('toastMessage');
+        toastMessage.textContent = message;
+        toast.classList.add('show');
+        setTimeout(() => toast.classList.remove('show'), 5000);
+      }
+
+      // Scroll to RSVP
+      window.scrollToRSVP = function() {
+        document.getElementById('rsvp').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+
+    });
+  </script>
+
+</body>
+</html>
